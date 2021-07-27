@@ -24,4 +24,4 @@ execute store result entity @e[tag=GhastFireball,sort=nearest,limit=1] direction
 execute store result entity @e[tag=GhastFireball,sort=nearest,limit=1] direction[2] double 0.02 run scoreboard players get @s projZ
 
 execute as @e[tag=GhastFireball,sort=nearest,limit=1] run tag @s remove GhastFireball
-give @s potion{Potion:"fire_resistance",display:{Name:"\"Fireball Caster\""}} 1
+give @s potion{Potion:"fire_resistance",display:{Name:'"Fireball Caster"'}} 1
