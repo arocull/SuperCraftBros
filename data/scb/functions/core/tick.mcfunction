@@ -1,5 +1,5 @@
 ## Consumables
-execute as @a[scores={Class=4}] if entity @s[nbt={Inventory:[{id:"minecraft:glass_bottle"}]}] run function core:attack_ghast_fireball
+execute as @a[scores={Class=4}] if entity @s[nbt={Inventory:[{id:"minecraft:glass_bottle"}]}] run function scb:core/attack_ghast_fireball
 
 
 

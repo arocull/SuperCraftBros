@@ -3,6 +3,15 @@ gamerule doMobSpawning false
 gamerule doTileDrops false
 gamerule doImmediateRespawn true
 gamerule naturalRegeneration false
+gamerule fallDamage false
+gamerule disableRaids true
+gamerule doFireTick false
+gamerule doMobLoot false
+gamerule universalAnger true
+gamerule doInsomnia false
+gamerule commandBlockOutput false
+gamerule mobGriefing false
+gamerule announceAdvancements false
 
 team add Lobby "Lobby"
 team modify Lobby color aqua
@@ -48,4 +57,4 @@ scoreboard objectives add projX dummy
 scoreboard objectives add projY dummy
 scoreboard objectives add projZ dummy
 
-function core:tick
+function scb:core/tick
