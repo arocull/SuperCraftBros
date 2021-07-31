@@ -1,23 +1,18 @@
-## Consumables
-execute as @a[scores={Class=4}] if entity @s[nbt={Inventory:[{id:"minecraft:glass_bottle"}]}] run function scb:core/attack_ghast_fireball
+# Tick Functions
 
-# execute as @a[nbt={Inventory:[{id:"minecraft:filled_map"}]}] at @s run function scb:characters/util/cast_ult
+# Consumables
+scoreboard players add @a AbilityTimer 1
 
-#### Add ultimate tag and tick ultimate timers
-##tag @a[nbt={Inventory:[{id:"minecraft:filled_map"}]}] add Ultimate
-##scoreboard players add @a[tag=Ultimate] UltTimer 1
-##
-##execute as @a[tag=Ultimate] if score @s UltTimer matches 2.. run clear @s filled_map
-##clear @a[tag=!Ultimate] filled_map
-##
-##scoreboard players set @a[tag=!Ultimate] UltTimer 0
-##execute as @a[tag=Ultimate,tag=UltimateFinished] if score @s UltTimer matches 2.. run tag @s remove Ultimate
-##execute as @a[tag=UltimateFinished] if score @s UltTimer matches 2.. run tag @s remove UltimateFinished
-##
-##
-#### Ultimates
-##execute as @a[tag=Ultimate,tag=!UltimateFinished,scores={Class=1}] at @s run function ultimates:snow_golem
-##execute as @a[tag=Ultimate,tag=!UltimateFinished,scores={Class=2}] at @s run function ultimates:wither_skeleton
+execute as @a[scores={Class=4}] if entity @s[nbt={Inventory:[{id:"minecraft:glass_bottle"}]}] at @s run function scb:characters/attacks/ghast_fireball
+execute as @a[scores={Class=11},nbt=!{Inventory:[{id:"minecraft:splash_potion"}]}] at @s run function scb:characters/attacks/witch_potion
+execute as @a[scores={Class=9}] if entity @s[nbt={Inventory:[{id:"minecraft:glass_bottle"}]}] at @s run function scb:characters/attacks/creeper_prepare
+execute as @a[tag=CreeperBlast] if score @s AbilityTimer matches 15 at @s run function scb:characters/attacks/creeper_detonate
+execute as @a[tag=CreeperBlast] if score @s AbilityTimer matches 50 at @s run function scb:characters/attacks/creeper_resupply
 
 
-schedule function core:tick 1t
+# Cast ultimate if player is holding a map
+execute as @a[nbt={Inventory:[{id:"minecraft:filled_map"}]}] at @s run function scb:characters/util/cast_ult
+
+# Tick ult timers and call effects and finishers
+scoreboard players add @a UltTimer 1
+execute as @a at @s run function scb:characters/util/ult_finisher

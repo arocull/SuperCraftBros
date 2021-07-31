@@ -1,0 +1,1 @@
+playsound minecraft:entity.ghast.warn player @a ~ ~ ~ 1 1

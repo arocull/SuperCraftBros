@@ -1,0 +1,1 @@
+particle end_rod ~ ~.5 ~ 0.25 0.5 0.25 0.1 3 normal

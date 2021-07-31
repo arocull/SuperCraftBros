@@ -1,0 +1,23 @@
+{
+	"replace": false,
+	"values": [
+                "minecraft:creeper",
+                "minecraft:spider",
+                "minecraft:cave_spider",
+                "minecraft:slime",
+                "minecraft:silverfish",
+                "minecraft:vex",
+                "minecraft:guardian",
+                "minecraft:elder_guardian",
+                "minecraft:phantom",
+                "minecraft:ghast",
+                "minecraft:blaze",
+                "minecraft:magma_cube",
+                "minecraft:piglin",
+                "minecraft:hoglin",
+                "minecraft:wolf",
+                "#scb:ender",
+                "#scb:undead",
+                "#minecraft:raiders"
+	]
+}

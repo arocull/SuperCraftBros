@@ -27,7 +27,7 @@ team modify Players deathMessageVisibility always
 team modify Players nametagVisibility hideForOwnTeam
 team modify Players collisionRule pushOwnTeam
 
-team join Lobby @a
+team join Lobby *
 effect clear @a
 clear @a
 
@@ -41,6 +41,9 @@ scoreboard objectives setdisplay sidebar Lives
 
 scoreboard objectives add UltTimer dummy "Ultimate Timer"
 scoreboard players set * UltTimer 0
+
+scoreboard objectives add AbilityTimer dummy "Ability Timer"
+scoreboard players set * AbilityTimer 0
 
 scoreboard objectives add PlayersAlive dummy "Players Left"
 scoreboard players reset * PlayersAlive
@@ -57,4 +60,4 @@ scoreboard objectives add projX dummy
 scoreboard objectives add projY dummy
 scoreboard objectives add projZ dummy
 
-function scb:core/tick
+difficulty hard
