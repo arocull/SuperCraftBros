@@ -2,6 +2,9 @@
 execute if score @s Class matches 9 if score @s UltTimer matches 1..59 run function scb:characters/ult_running/creeper
 execute if score @s Class matches 11 if score @s UltTimer matches 120 run function scb:characters/ult_running/witch
 execute if score @s Class matches 12 if score @s UltTimer matches 1..200 run function scb:characters/ult_running/ocelot
+execute if score @s Class matches 14 if score @s UltTimer matches 1..120 run function scb:characters/ult_running/mooshroom
+execute if score @s Class matches 1001 if score @s UltTimer matches 1..400 run function scb:characters/ult_running/beacon
+execute if score @s Class matches 1003 if score @s UltTimer matches 1..20 run function scb:characters/ult_running/sand
 execute if score @s Class matches 1004 if score @s UltTimer matches 1..160 run function scb:characters/ult_running/obsidian
 
 # Ult Finishers
@@ -11,3 +14,5 @@ execute if score @s Class matches 9 if score @s UltTimer matches 60 run function
 execute if score @s Class matches 10 if score @s UltTimer matches 160 run function scb:characters/ult_finish/rabbit
 execute if score @s Class matches 11 if score @s UltTimer matches 480 run function scb:characters/ult_finish/witch
 execute if score @s Class matches 15 if score @s UltTimer matches 250 run function scb:characters/ult_finish/sheep
+execute if score @s Class matches 1002 if score @s UltTimer matches 20 run function scb:characters/ult_finish/cactus
+execute if score @s Class matches 1003 if score @s UltTimer matches 20 run function scb:characters/ult_finish/sand

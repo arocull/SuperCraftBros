@@ -1,0 +1,2 @@
+execute at @e[type=falling_block,nbt={BlockState:{Name:"minecraft:sand"}}] run particle minecraft:white_ash ~ ~.75 ~ 0.25 0.25 0.25 1 20 normal
+kill @e[type=falling_block,nbt={BlockState:{Name:"minecraft:sand"}}]
