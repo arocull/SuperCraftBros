@@ -45,6 +45,10 @@ scoreboard players set * UltTimer 0
 scoreboard objectives add AbilityTimer dummy "Ability Timer"
 scoreboard players set * AbilityTimer 0
 
+# DEBUFF TIMER for Guardian
+scoreboard objectives add DebuffTimer13 dummy "Guardian Debuff Timer"
+scoreboard players set @a DebuffTimer13 0
+
 scoreboard objectives add PlayersAlive dummy "Players Left"
 scoreboard players reset * PlayersAlive
 
